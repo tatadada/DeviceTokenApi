@@ -1,0 +1,1 @@
+curl -H 'Content-Type: application/json' -X PUT -d '[JSON]' http://localhost:8080/ios/devicetoken

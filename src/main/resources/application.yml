@@ -1,0 +1,31 @@
+#logging.level.org.springframework.web: DEBUG
+#logging.level.org.hibernate: ERROR
+#logging.level.com.tatadada: DEBUG
+
+spring:
+    application:
+        name: DeviceTokenCollector
+    main:
+        show-banner: true
+
+    datasource:
+        driverClassName: org.postgresql.Driver
+    activeProfile: prod
+---
+spring:
+  profiles: prod
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/tatadada-device-token
+    username: tatadada-device-token
+    password: tatadada-device-token
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+---
+spring:
+  profiles: test
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:5432/tatadada-device-token-test
+    username: tatadada-device-token
+    password: tatadada-device-token
+...
