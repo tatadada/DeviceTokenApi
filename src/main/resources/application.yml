@@ -7,7 +7,6 @@ spring:
         name: DeviceTokenCollector
     main:
         show-banner: true
-
     datasource:
         driverClassName: org.postgresql.Driver
     activeProfile: prod
@@ -20,6 +19,10 @@ spring:
     password: tatadada-device-token
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  hibernate:
+    ddl-auto: create-drop
+    show-sql: true
 ---
 spring:
   profiles: test
@@ -28,4 +31,8 @@ spring:
     url: jdbc:postgresql://127.0.0.1:5432/tatadada-device-token-test
     username: tatadada-device-token
     password: tatadada-device-token
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      show-sql: true
 ...

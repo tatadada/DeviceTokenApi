@@ -25,12 +25,6 @@ public final class DeviceToken {
     @NotNull
     private String tatadadaDeviceToken;
 
-//    public DeviceToken(String deviceToken, String applicationIdentifier, String tatadadaDeviceToken) {
-//        this.deviceToken = deviceToken;
-//        this.applicationIdentifier = applicationIdentifier;
-//        this.tatadadaDeviceToken = tatadadaDeviceToken;
-//    }
-
     private DeviceToken(Builder builder) {
         this.deviceToken = builder.deviceToken;
         this.applicationIdentifier = builder.applicationIdentifier;

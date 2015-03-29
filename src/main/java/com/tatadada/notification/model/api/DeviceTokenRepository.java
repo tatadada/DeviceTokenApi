@@ -3,7 +3,7 @@ package com.tatadada.notification.model.api;
 import com.tatadada.notification.model.DeviceToken;
 import org.springframework.data.repository.Repository;
 
-import java.util.List;
+import java.util.Collection;
 import java.util.Optional;
 
 /**
@@ -23,7 +23,7 @@ public interface DeviceTokenRepository extends Repository<DeviceToken, Long> {
      * Finds all todo entries from the database.
      * @return  The information of all todo entries that are found from the database.
      */
-    List<DeviceToken> findAll();
+    Collection<DeviceToken> findAll();
 
     /**
      * Finds the information of a single DeviceToken entry.

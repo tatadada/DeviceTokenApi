@@ -1,14 +1,23 @@
 package com.tatadada.notification.dto;
 
 import com.google.common.base.Strings;
-import com.tatadada.notification.model.DeviceToken;
 
 public class DeviceTokenDTO {
 
+
+    private Long id;
     private String deviceToken;
     private String applicationIdentifier;
     private String tatadadaDeviceToken;
 
+    public DeviceTokenDTO(Long id, String deviceToken, String applicationIdentifier, String tatadadaDeviceToken) {
+        this.deviceToken = deviceToken;
+        this.applicationIdentifier = applicationIdentifier;
+        this.tatadadaDeviceToken = tatadadaDeviceToken;
+        this.id=id;
+    }
+
+    //TODO add a builder please
     public DeviceTokenDTO(String deviceToken, String applicationIdentifier, String tatadadaDeviceToken) {
         this.deviceToken = deviceToken;
         this.applicationIdentifier = applicationIdentifier;
@@ -55,7 +64,11 @@ public class DeviceTokenDTO {
         return !Strings.isNullOrEmpty(deviceToken) && !Strings.isNullOrEmpty(applicationIdentifier) && !Strings.isNullOrEmpty(tatadadaDeviceToken);
     }
 
-    public static DeviceTokenDTO fromEntity(DeviceToken deviceToken) {
-        return new DeviceTokenDTO(deviceToken.getDeviceToken(), deviceToken.getApplicationIdentifier(), deviceToken.getTatadadaDeviceToken());
+    public Long getId() {
+        return this.id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
