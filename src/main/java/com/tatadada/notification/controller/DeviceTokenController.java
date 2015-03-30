@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.*;
  * Created by mbogheti on 22/03/15.
  */
 @RestController
-public class NotificationController {
+public class DeviceTokenController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(NotificationController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DeviceTokenController.class);
 
     private final DeviceTokenService deviceTokenService;
 
     @Autowired
-    public NotificationController(DeviceTokenService deviceTokenService) {
+    public DeviceTokenController(DeviceTokenService deviceTokenService) {
         this.deviceTokenService = deviceTokenService;
     }
 

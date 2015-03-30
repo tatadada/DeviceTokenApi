@@ -22,7 +22,7 @@ import java.util.Arrays;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 
 
-public class NotificationControllerTest extends TatadadaBaseTest {
+public class DeviceTokenControllerTest extends TatadadaBaseTest {
     private MockMvc mockMvc;
     private HttpMessageConverter mappingJackson2HttpMessageConverter;
 
